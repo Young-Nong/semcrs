@@ -1,11 +1,10 @@
 """
 cp_runner.py — Container orchestration for the Mock CP.
 
-The original AIxCC competition image (ghcr.io/aixcc-sc/mock-cp) is gone: the
-aixcc-sc GitHub org was deleted. This rebuilds the CP locally from the bundled
-source on the still-public `gcr.io/oss-fuzz-base/base-clang` base and drives
-build / run_pov entirely through `docker cp` + `docker exec` (no bind mounts,
-so it behaves identically on Windows, WSL, and Linux).
+The bundled benchmark program ships without a prebuilt image, so this rebuilds it
+locally from the bundled source on the public `gcr.io/oss-fuzz-base/base-clang`
+base and drives build / run_pov entirely through `docker cp` + `docker exec`
+(no bind mounts, so it behaves identically on Windows, WSL, and Linux).
 
 Driving docker from Python (not bash) also avoids MSYS path mangling on Windows.
 """

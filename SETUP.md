@@ -1,9 +1,8 @@
 # SETUP - installing, testing, and running the artifact
 
-This artifact reconstructs the SemCRS pipeline (AIxCC 2024) as a standalone
-demo on the public **Mock CP** challenge project. The original competition images
-(`ghcr.io/aixcc-sc/*`) are gone - the `aixcc-sc` org was deleted - so the CP is
-rebuilt locally from bundled source on the still-public `gcr.io/oss-fuzz-base/base-clang`.
+This artifact runs the SemCRS pipeline as a standalone demo on a bundled benchmark
+program (the **Mock CP**). The program ships without a prebuilt image, so it is
+rebuilt locally from bundled source on the public `gcr.io/oss-fuzz-base/base-clang`.
 
 ## Requirements
 - **Docker** (Desktop on Windows/macOS, or Docker Engine on Linux). First run pulls
@@ -57,12 +56,12 @@ patch.diff             vds_request.json       gp_request.json      summary.txt
 A successful run ends with: PoV validated (sanitizer fired), patch blocks the PoV,
 and functional tests pass.
 
-## What is original vs. reconstructed
-- **Pipeline design & prompts:** from the 2024 AIxCC submission.
-- **Model:** GPT-5 here (the 2024 run used GPT-4-turbo / GPT-3.5). Ported from the
-  legacy `openai.ChatCompletion` SDK to the current SDK.
-- **Submission step:** the competition cAPI is offline; the tool emits the exact
-  schema-conformant VDS/GP JSON payloads instead of POSTing them.
+## Notes
+- **Model:** the demo calls GPT-5 via the current OpenAI SDK; the model is
+  configurable through the `LLM_MODEL` environment variable.
+- **Submission step:** the scoring server is offline in this standalone artifact,
+  so the tool emits the exact schema-conformant VDS/GP JSON payloads instead of
+  POSTing them.
 
 ## Troubleshooting
 - **`OPENAI_API_KEY is not set`** - only the live tier needs it; use `--smoke-test`

@@ -17,8 +17,8 @@ Modes:
                        Runs the full pipeline (incl. container + patching) with
                        no API key. Use as the recording fallback.
 
-The competition API (cAPI) is gone, so VDS/GP submissions are printed as the
-exact JSON payloads that would have been POSTed, clearly labelled as stubs.
+The scoring server is offline, so VDS/GP submissions are printed as the exact
+JSON payloads that would have been POSTed, clearly labelled as stubs.
 """
 import argparse
 import base64
