@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+_work/
+# mock-cp/ is extracted from mock-cp.tar.gz at runtime; ship the tarball, not the tree
+mock-cp/
+# NOTE: commit run1.json (your recorded GPT-5 cache) so reviewers can use --replay
