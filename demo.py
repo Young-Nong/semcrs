@@ -120,7 +120,10 @@ def resolve_mockcp(explicit):
         import tarfile
         print("[setup] extracting bundled mock-cp.tar.gz ...")
         with tarfile.open(tar) as t:
-            t.extractall(here)
+            try:
+                t.extractall(here, filter="data")   # silence Py3.12+ tar warning
+            except TypeError:
+                t.extractall(here)                   # older Python without filter
         d = os.path.join(here, "mock-cp")
         if os.path.isdir(d):
             return d
@@ -216,9 +219,8 @@ def main():
     else:
         mode = f"LIVE ({model})"
     print(f"{BAR}\n  SemCRS - autonomous vulnerability discovery & patching\n"
-          f"  Pipeline: AIxCC 2024 (DARPA AI Cyber Challenge)  |  standalone reconstruction\n"
-          f"  LLM: {mode}   (the 2024 competition run used GPT-4-turbo / GPT-3.5)\n"
-          f"  target CP: '{cp_name}'  |  scored sanitizers: {list(sanitizers.values())}\n{BAR}")
+          f"  LLM: {mode}\n"
+          f"  target program: '{cp_name}'  |  sanitizers: {list(sanitizers.values())}\n{BAR}")
     pause()
 
     # ---- STAGE 1: seed-input generation ------------------------------------
