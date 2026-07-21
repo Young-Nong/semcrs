@@ -1,6 +1,6 @@
 # Notices & provenance
 
-This repository is the demo artifact for the CCS demo paper on the **Buffalo CRS**,
+This repository is the demo artifact for the CCS demo paper on the **SemCRS**,
 a standalone reconstruction of a system entered in the 2024 DARPA AI Cyber Challenge
 Semifinal Competition (AIxCC ASC).
 

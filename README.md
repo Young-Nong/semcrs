@@ -1,4 +1,4 @@
-# Buffalo CRS - autonomous vulnerability discovery & patching (CCS demo artifact)
+# SemCRS - autonomous vulnerability discovery & patching (CCS demo artifact)
 
 Standalone reconstruction of a Cyber Reasoning System entered in the 2024 DARPA AI
 Cyber Challenge (AIxCC). Given only a challenge project and its fuzzing harness, it

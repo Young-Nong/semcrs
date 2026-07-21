@@ -1,6 +1,6 @@
 # SETUP - installing, testing, and running the artifact
 
-This artifact reconstructs the Buffalo CRS pipeline (AIxCC 2024) as a standalone
+This artifact reconstructs the SemCRS pipeline (AIxCC 2024) as a standalone
 demo on the public **Mock CP** challenge project. The original competition images
 (`ghcr.io/aixcc-sc/*`) are gone - the `aixcc-sc` org was deleted - so the CP is
 rebuilt locally from bundled source on the still-public `gcr.io/oss-fuzz-base/base-clang`.

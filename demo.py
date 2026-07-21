@@ -1,5 +1,5 @@
 """
-demo.py - staged, narratable re-run of the Buffalo AIxCC CRS on the Mock CP.
+demo.py - staged, narratable re-run of the SemCRS on the Mock CP.
 
 Reproduces the pipeline the original `detect.py` implemented, but as clean,
 sectioned stages suitable for a screen recording:
@@ -215,7 +215,7 @@ def main():
         mode = f"REPLAY ({model}, cached)"
     else:
         mode = f"LIVE ({model})"
-    print(f"{BAR}\n  Buffalo CRS - autonomous vulnerability discovery & patching\n"
+    print(f"{BAR}\n  SemCRS - autonomous vulnerability discovery & patching\n"
           f"  Pipeline: AIxCC 2024 (DARPA AI Cyber Challenge)  |  standalone reconstruction\n"
           f"  LLM: {mode}   (the 2024 competition run used GPT-4-turbo / GPT-3.5)\n"
           f"  target CP: '{cp_name}'  |  scored sanitizers: {list(sanitizers.values())}\n{BAR}")
