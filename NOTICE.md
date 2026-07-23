@@ -1,7 +1,7 @@
 # Notices & provenance
 
-This repository is the demo artifact for the CCS demo paper on **SemCRS**, an
-autonomous system for software vulnerability discovery and patching.
+This repository is the demo artifact for the CCS demo paper on **SemCRS**, a system
+that streamlines software vulnerability discovery and patching.
 
 ## Notes
 - **Model:** this demo calls GPT-5 via the current OpenAI SDK. The model is

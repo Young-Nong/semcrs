@@ -1,10 +1,11 @@
-# SemCRS - autonomous vulnerability discovery & patching (CCS demo artifact)
+# SemCRS - streamlining vulnerability discovery & patching (CCS demo artifact)
 
-SemCRS is a Cyber Reasoning System for automated software security. Given only a
-program and its fuzzing harness, it runs a six-stage pipeline that discovers a
-vulnerable function, generates and **validates** a proof-of-vulnerability (PoV)
-against AddressSanitizer, generates a patch, and confirms the same PoV no longer
-fires while the program's functional tests still pass.
+SemCRS is a Semantics-guided Cyber Reasoning System for automated software security.
+Given a program, its fuzzing harness, and the target sanitizer classes, it streamlines
+discovery and patching in a single six-stage pipeline: it discovers a vulnerable
+function, generates and **validates** a proof-of-vulnerability (PoV) against
+AddressSanitizer, and then generates a patch that blocks the same PoV while the
+program's functional tests still pass.
 
 The bundled benchmark program (the "Mock CP") ships without a prebuilt image, so it
 is rebuilt locally from source on the public `gcr.io/oss-fuzz-base/base-clang` base.
