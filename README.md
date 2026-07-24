@@ -21,7 +21,6 @@ candidate functions), PoV generation, validation under AddressSanitizer, and pat
 generation with the post-patch PoV re-run and functional tests. The run ends with a
 sanitizer-validated PoV and a patch that blocks it while the functional tests still pass.
 
-<!-- YouTube mirror (easier to stream than the in-repo file) - add once uploaded:
 
 ## Quick start
 
