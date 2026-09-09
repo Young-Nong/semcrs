@@ -38,7 +38,10 @@ export OPENAI\_API\_KEY=sk-...         # Windows PowerShell: $env:OPENAI\_API\_K
 python demo.py
 ```
 
-The Mock CP is bundled as `mock-cp.tar.gz` and auto-extracted on first run. For other CPs, please use this link to download: https://figshare.com/s/ea9fa61743081c2d509b.
+The Mock CP is bundled as `mock-cp.tar.gz` and auto-extracted on first run. 
+
+For other CPs, please use this link to download: https://figshare.com/s/ea9fa61743081c2d509b.
+
 Full install/testing tiers and troubleshooting: [SETUP.md](SETUP.md).
 
 ## Files
